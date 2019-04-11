@@ -1,0 +1,22 @@
+version: '3'
+services:
+  minecraft-server:
+    build:
+      context: ./build
+    container_name: mc
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.13.2"
+      TYPE: "SPIGOT"
+      OPS: "EnderJoshua"
+      WHITELIST: "EnderJoshua,SamInShell,MiniFlamme"
+      UID: 1001
+      GID: 1001
+    volumes:
+    - ./data:/data
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    command: "--noconsole"

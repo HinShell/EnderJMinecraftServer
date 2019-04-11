@@ -1,0 +1,9 @@
+backup.sh
+.bash*
+.vim*
+.config/
+.lnav/
+.ssh/
+.selected_editor
+.profile
+data-1.12.2/
